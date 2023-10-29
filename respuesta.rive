@@ -1,0 +1,187 @@
++ hola
+- Hola, ¿Estas interesado en realizar un prestamo de implementos deportivos? \n
+^ Indica si o cancelar.
+
++ si
+- Excelente. ¿Aqui tienes las opciones implementadas? \n
+^ - Para ver la lista de implementos disponibles, escribe "lista." \n
+^ - Para sugerir un implemento para un deporte especifico, escribe "sugerir implementos para [deporte]." \n
+^ Deportes disponibles: tenis, futbol, baloncesto, badminton, patinaje, surf, ciclismo, boxeo, esqui. \n
+
++ lista
+- Indica el numero correspondiente al implemento que desear prestar" \n
+^ - Para ver la disponibilidad, escribe "disponibilidad." \n
+^ 1. Raqueta de tenis \n
+^ 2. Pelota de futbol \n
+^ 3. Balon de baloncesto \n
+^ 4. Raqueta de badminton \n
+^ 5. Patines en linea \n
+^ 6. Tabla de surf \n
+^ 7. Bicicleta de montana \n
+^ 8. Guantes de boxeo \n
+^ 9. Bastones de esqui \n
+^ 10. Casco de ciclismo \n
+
++ no
+- Esta bien. Si cambias de opinion o necesitas ayuda mas tarde, no dudes en preguntar. ¡Buen dia!
+
+
+
++ disponibilidad
+- Aqui tienes la disponibilidad de implementos, o indica el numero del implemento:
+^ 1. Raqueta de tenis (Disponibles: 5 unidades) \n
+^ 2. Pelota de futbol (Disponibles: 10 unidades) \n
+^ 3. Balon de baloncesto (Disponibles: 8 unidades) \n
+^ 4. Raqueta de badminton (Disponibles: 3 unidades) \n
+^ 5. Patines en linea (Disponibles: 7 unidades) \n
+^ 6. Tabla de surf (Disponibles: 4 unidades) \n
+^ 7. Bicicleta de montana (Disponibles: 6 unidades) \n
+^ 8. Guantes de boxeo (Disponibles: 2 unidades) \n
+^ 9. Bastones de esqui (Disponibles: 5 unidades) \n
+^ 10. Casco de ciclismo (Disponibles: 3 unidades) \n
+
++ [*] (cancelar)
+- Has cancelado la solicitud de prestamo. Si deseas realizar un prestamo en el futuro, no dudes en preguntar. ¡Que tengas un buen dia!
+
+
++ [*] horas
+{
+  var duracion = getUservar("duracion");
+  if (duracion) {
+    - ¡Felicidades! Has realizado el prestamo por <getUservar("duracion")>. Disfruta de tu implemento deportivo durante <getUservar("duracion")>.
+  } else {
+    var user_input = <star>;
+    if (match(user_input, "/^(\\d+) horas?$/")) {
+      var duracion = match(user_input, "/^(\\d+) horas?$/")[1];
+      setUservar("duracion", duracion);
+      - ¡Felicidades! Has realizado el prestamo por <getUservar("duracion")>. Disfruta de tu implemento deportivo durante <getUservar("duracion")>.
+    } else {
+      - ¡Felicidades! Has realizado el prestamo por <star>. Disfruta de tu implemento deportivo durante <star>.
+    }
+  }
+}
+
++ [*] minutos
+{
+  var duracion = getUservar("duracion");
+  if (duracion) {
+    - ¡Felicidades! Has realizado el prestamo por <getUservar("duracion")>. Disfruta de tu implemento deportivo durante <getUservar("duracion")>.
+  } else {
+    var user_input = <star>;
+    if (match(user_input, "/^(\\d+) minutos?$/")) {
+      var duracion = match(user_input, "/^(\\d+) minutos?$/")[1];
+      setUservar("duracion", duracion);
+      - ¡Felicidades! Has realizado el prestamo por <getUservar("duracion")>. Disfruta de tu implemento deportivo durante <getUservar("duracion")>.
+    } else {
+      - ¡Felicidades! Has realizado el prestamo por <star>. Disfruta de tu implemento deportivo durante <star>.
+    }
+  }
+}
+
+
++ sugerir implementos para tenis
+- Aqui tienes una lista de implementos para tenis: \n
+^ 1. Raqueta de tenis \n
+^ 2. Pelotas de tenis \n
+^ 3. Ropa deportiva para tenis \n
+^ - Para regresar al menu escribe "volver."  \n
+
++ sugerir implementos para futbol
+- Aqui tienes una lista de implementos para futbol: \n
+^ 1. Pelota de futbol \n
+^ 2. Botas de futbol \n
+^ 3. Ropa deportiva para futbol \n
+^ - Para regresar al menu escribe "volver." \n
+
++ sugerir implementos para baloncesto
+- Aqui tienes una lista de implementos para baloncesto: \n
+^ 1. Balon de baloncesto \n
+^ 2. Zapatillas de baloncesto \n
+^ 3. Ropa deportiva para baloncesto \n
+^ - Para regresar al menu escribe "volver." \n
+
++ sugerir implementos para badminton
+- Aqui tienes una lista de implementos para badminton: \n
+^ 1. Raqueta de badminton \n
+^ 2. Volantes (plumillas) \n
+^ 3. Ropa deportiva para badminton \n
+^ - Para regresar al menu escribe "volver." \n
+
++ sugerir implementos para patinaje
+- Aqui tienes una lista de implementos para patinaje: \n
+^ 1. Patines en linea \n
+^ 2. Equipo de proteccion \n
+^ 3. Ropa deportiva para patinaje \n
+^ - Para regresar al menu escribe "volver." \n
+
++ sugerir implementos para surf
+- Aqui tienes una lista de implementos para surf: \n
+^ 1. Tabla de surf \n
+^ 2. Traje de neopreno \n
+^ 3. Accesorios de surf \n
+^ - Para regresar al menu escribe "volver." \n
+
++ sugerir implementos para ciclismo
+- Aqui tienes una lista de implementos para ciclismo: \n
+^ 1. Bicicleta de montana \n
+^ 2. Casco de ciclismo \n
+^ 3. Ropa deportiva para ciclismo \n
+^ - Para regresar al menu escribe "volver." \n
+
++ sugerir implementos para boxeo
+- Aqui tienes una lista de implementos para boxeo: \n
+^ 1. Guantes de boxeo \n
+^ 2. Saco de boxeo \n
+^ 3. Ropa deportiva para boxeo \n
+^ - Para regresar al menu escribe "volver." \n
+
++ sugerir implementos para esqui
+- Aqui tienes una lista de implementos para esqui: \n
+^ 1. Bastones de esqui \n
+^ 2. Esquis \n
+^ 3. Ropa deportiva para esqui \n
+^ - Para regresar al menu escribe "volver." \n
+
+
++ volver
+- Volviendo a la lista de opciones y sugerencias, "Indica el numero del implemento a prestar."\n
+^ 1. Raqueta de tenis\n
+^ 2. Pelota de futbol\n
+^ 3. Balon de baloncesto\n
+^ 4. Raqueta de badminton\n
+^ 5. Patines en linea\n
+^ 6. Tabla de surf\n
+^ 7. Bicicleta de montana\n
+^ 8. Guantes de boxeo\n
+^ 9. Bastones de esqui\n
+^ 10. Casco de ciclismo\n
+
++ [*] (1)
+- Excelente, has seleccionado la Raqueta de tenis. ¿Por cuanto tiempo deseas tomarla prestada? ¿En horas o minutos?
+
++ [*] (2)
+- Estupendo, has seleccionado la Pelota de futbol. ¿Por cuanto tiempo deseas tomarla prestada? ¿En horas o minutos?
+
++ [*] (3)
+- Genial, has seleccionado el Balon de baloncesto. ¿Por cuanto tiempo deseas tomarlo prestado? ¿En horas o minutos?
+
++ [*] (4)
+- Fantastico, has seleccionado la Raqueta de badminton. ¿Por cuanto tiempo deseas tomarla prestada? ¿En horas o minutos?
+
++ [*] (5)
+- Perfecto, has seleccionado los Patines en linea. ¿Por cuanto tiempo deseas tomarlos prestados? ¿En horas o minutos?
+
++ [*] (6)
+- Excelente, has seleccionado la Tabla de surf. ¿Por cuanto tiempo deseas tomarla prestada? ¿En horas o minutos?
+
++ [*] (7)
+- Estupendo, has seleccionado la Bicicleta de montana. ¿Por cuanto tiempo deseas tomarla prestada? ¿En horas o minutos?
+
++ [*] (8)
+- Genial, has seleccionado los Guantes de boxeo. ¿Por cuanto tiempo deseas tomarlos prestados? ¿En horas o minutos?
+
++ [*] (9)
+- Fantastico, has seleccionado los Bastones de esqui. ¿Por cuanto tiempo deseas tomarlos prestados? ¿En horas o minutos?
+
++ [*] (10)
+- Perfecto, has seleccionado el Casco de ciclismo. ¿Por cuanto tiempo deseas tomarlo prestado? ¿En horas o minutos?
